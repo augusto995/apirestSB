@@ -1,5 +1,7 @@
 package com.example.inicial1.entities.audit;
+import java.util.Date;
 
+import com.example.inicial1.config.CustomRevisionListener;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.envers.RevisionEntity;
@@ -12,7 +14,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "REVISION_INFO")
-@RevisionEntity(CustomRevisionsListener.class)
+@RevisionEntity(CustomRevisionListener.class)
 @Data
 public class Revision implements Serializable {
 
@@ -22,7 +24,7 @@ public class Revision implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "revision_seq")
     @SequenceGenerator(
             name="revision_seq",
-            sequenceName = "rbac.seq_revision_id"
+            sequenceName = "seq_revision_id"
     )
     @RevisionNumber
     private int id;

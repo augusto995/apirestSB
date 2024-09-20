@@ -28,7 +28,7 @@ public class Inicial1Application {
 	}
 
 
-
+/*
 
 	@Bean
 	@Transactional
@@ -87,7 +87,7 @@ per1.setDomicilio(dom1);
 
 		};
 
-
+*/
 
 
 }

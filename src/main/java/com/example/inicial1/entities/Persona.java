@@ -26,8 +26,9 @@ public class Persona implements Serializable {
     private String apellido;
     @Column(name = "dni")
     private int dni;
-    @OneToOne(cascade = CascadeType.ALL)
+/*    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_domicilio")
     private Domicilio domicilio;
+    */
 }
 
